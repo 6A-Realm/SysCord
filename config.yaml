@@ -1,0 +1,7 @@
+# Discord Settings
+token: TOKEN HERE
+prefix: + 
+
+# Switch settings
+ip: 10.0.0.164
+port: 6000
