@@ -1,6 +1,6 @@
+from disnake.ext import commands
 import core.wireless as s
 import asyncio
-from disnake.ext import commands
 
 class miscellaneous(commands.Cog):
     def __init__(self, syscord):
@@ -26,6 +26,6 @@ class miscellaneous(commands.Cog):
         title = ((await connection._r.read(689))[:-1]).decode("utf-8")
         await ctx.send(title)
 
-            
+
 def setup(syscord):
     syscord.add_cog(miscellaneous(syscord))

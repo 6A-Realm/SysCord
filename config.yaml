@@ -1,7 +1,7 @@
-# Discord Settings
-token: TOKEN.GOES.HERE
-prefix: + 
+# General configuration settings
+token:
+prefix: +
 
 # Switch settings
-ip: 10.0.0.164
+ip: 10.0.0.0
 port: 6000

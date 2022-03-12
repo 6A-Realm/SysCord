@@ -15,7 +15,7 @@ class screen(commands.Cog):
         embed.add_field(name="Screen Commands:", value="`on, off, shot, capture, percent`", inline=False)
         embed.set_footer(text="Capture does not work for LGPE.")
         if function is None:
-            await ctx.send(embed=embed)
+            await ctx.send(embed = embed)
         check = function.lower()
         connection = s.connection(self.syscord)
         await connection.connect()
@@ -37,13 +37,13 @@ class screen(commands.Cog):
             await connection.switch("click CAPTURE")
             embed=disnake.Embed(description="Your switch screen was attempted to be captured.", color=0x17c70a)
             embed.set_footer(text="Note that this function does not work for LGPE.")
-            await ctx.send(embed=embed)
+            await ctx.send(embed = embed)
         elif check in ["battery", "percent"]:
             await connection.switch("charge")
             charge = ((await connection._r.read(689))[:-1]).decode("utf-8")
             await ctx.send(f"Your Switch's battery level is at {str(charge)}%.")
         else:
-            await ctx.send(embed=embed)
+            await ctx.send(embed = embed)
 
             
 def setup(syscord):
