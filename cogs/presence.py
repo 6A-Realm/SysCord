@@ -8,6 +8,16 @@ class PresenceCog(commands.Cog):
         self.bot = bot
         self.presence.start()
 
+    # Generate random presense text
+    async def random_text(self):
+        presence_list = [
+            "/ commands only",
+            "SysCord - by 6A",
+            "https://github.com/6A-Realm/SysCord",
+        ]
+
+        return random.choice(presence_list)
+
     # Create a async loop
     @tasks.loop(minutes = 2)
     async def presence(self):
@@ -21,16 +31,6 @@ class PresenceCog(commands.Cog):
                 name = presence
             )
         )
-
-    # Generate random presense text
-    async def random_text(self):
-        presence_list = [
-            "/ commands only",
-            "SysCord - by 6A",
-            "https://github.com/6A-Realm/SysCord",
-        ]
-
-        return random.choice(presence_list)
 
 
 def setup(bot):
