@@ -1,7 +1,5 @@
+dotenv
 disnake
-PyYAML==5.4.1
-jishaku
-binascii
 aiofiles
 io
 datetime
